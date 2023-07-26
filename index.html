@@ -24,6 +24,10 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
+
+        .bg-nav {
+            background-color: #F85559;
+        }
     </style>
 
     <!-- TAILWIND CUSTOM COLOR -->
@@ -32,7 +36,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'gradient-start': '#FF8938',
+                        'bg-navbar': '#F85559',
                         'gradient-end': '#F00',
                     }
                 }
@@ -44,9 +48,55 @@
 <body class="font-lato">
     <!-- HEADER SECTION START -->
     <header class="container mx-auto">
+        <!-- Navbar Start  -->
+        <nav>
+            <div class="navbar bg-nav mt-8 rounded-full">
 
+
+                <div class="text-white hidden lg:navbar-start lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Shop</a></li>
+                        <li><a>All Fruit</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-start lg:navbar-center lg:justify-center">
+                    <a class="btn btn-ghost normal-case text-xl">
+                        <img class="h-10" src="./images/logo.png" alt="logo">
+                        <h1 class="text-white font-extrabold text-2xl">Fruit Burst</h1>
+                    </a>
+                </div>
+                <div class="navbar-end lg:hidden">
+                    <div class="dropdown dropdown-bottom dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                class="inline-block w-5 h-5 stroke-current">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a>Homepage</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hidden lg:flex lg:navbar-end text-end w-[20%] relative">
+                    <input type="text" placeholder="Type here"
+                        class="border-2 pl-4 h-9 w-full border-black rounded-full" />
+                    <i class="fa-solid fa-magnifying-glass absolute top-3 right-5" style="color: #000000;"></i>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End  -->
+
+
+        <!-- Header Banner Section End -->
     </header>
-    <!-- HEADER SECTION START -->
+    <!-- HEADER SECTION END -->
 
     <!-- MAIN SECTION START -->
     <main class="container mx-auto">
